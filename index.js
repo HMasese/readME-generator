@@ -50,7 +50,7 @@ inquirer.prompt([
       message: 'What is your email address?'
     }
   ]).then(answers => {
-    const markdown = generateMarkdown(answers);
+    const markdown = generateReadme(answers);
     fs.writeFileSync('README.md', markdown);
   });
 
@@ -87,4 +87,4 @@ If you have any questions, you can reach me at [${answers.github}](https://githu
 `;
   return readme;
 }
-init();
+
